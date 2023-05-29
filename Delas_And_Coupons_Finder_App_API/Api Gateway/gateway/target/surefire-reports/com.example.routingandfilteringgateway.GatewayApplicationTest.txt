@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.example.routingandfilteringgateway.GatewayApplicationTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 8.258 s <<< FAILURE! - in com.example.routingandfilteringgateway.GatewayApplicationTest
+com.example.routingandfilteringgateway.GatewayApplicationTest  Time elapsed: 8.256 s  <<< ERROR!
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [com.example.routingandfilteringgateway.GatewayApplicationTest$BookService]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at com.example.routingandfilteringgateway.GatewayApplicationTest.startBookService(GatewayApplicationTest.java:31)
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.audit.AuditEventsEndpointAutoConfiguration
+	at com.example.routingandfilteringgateway.GatewayApplicationTest.startBookService(GatewayApplicationTest.java:31)
+Caused by: java.lang.IllegalArgumentException: Value must only contain valid chars
+	at com.example.routingandfilteringgateway.GatewayApplicationTest.startBookService(GatewayApplicationTest.java:31)
+

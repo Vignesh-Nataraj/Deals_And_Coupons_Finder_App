@@ -1,0 +1,11 @@
+C:\Users\vigne\Desktop\Intellij\CaseStudy-Microservices\Api Gateway\gateway\src\main\java\com\example\routingandfilteringgateway\model\JWTRequest.java
+C:\Users\vigne\Desktop\Intellij\CaseStudy-Microservices\Api Gateway\gateway\src\main\java\com\example\routingandfilteringgateway\repository\userDetails.java
+C:\Users\vigne\Desktop\Intellij\CaseStudy-Microservices\Api Gateway\gateway\src\main\java\com\example\routingandfilteringgateway\model\JWTRespone.java
+C:\Users\vigne\Desktop\Intellij\CaseStudy-Microservices\Api Gateway\gateway\src\main\java\com\example\routingandfilteringgateway\model\user.java
+C:\Users\vigne\Desktop\Intellij\CaseStudy-Microservices\Api Gateway\gateway\src\main\java\com\example\routingandfilteringgateway\configuration\CORSConfig.java
+C:\Users\vigne\Desktop\Intellij\CaseStudy-Microservices\Api Gateway\gateway\src\main\java\com\example\routingandfilteringgateway\controller\controller.java
+C:\Users\vigne\Desktop\Intellij\CaseStudy-Microservices\Api Gateway\gateway\src\main\java\com\example\routingandfilteringgateway\service\userservice.java
+C:\Users\vigne\Desktop\Intellij\CaseStudy-Microservices\Api Gateway\gateway\src\main\java\com\example\routingandfilteringgateway\configuration\securityConfig.java
+C:\Users\vigne\Desktop\Intellij\CaseStudy-Microservices\Api Gateway\gateway\src\main\java\com\example\routingandfilteringgateway\filter\JWTFilter.java
+C:\Users\vigne\Desktop\Intellij\CaseStudy-Microservices\Api Gateway\gateway\src\main\java\com\example\routingandfilteringgateway\RoutingAndFilteringGatewayApplication.java
+C:\Users\vigne\Desktop\Intellij\CaseStudy-Microservices\Api Gateway\gateway\src\main\java\com\example\routingandfilteringgateway\utility\JWTUtility.java
