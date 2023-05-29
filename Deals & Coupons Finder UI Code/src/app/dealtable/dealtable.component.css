@@ -1,0 +1,18 @@
+body {
+   
+    background: linear-gradient(to top, #000428 0%, #004e92 100%);
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+table {
+    background-color: hsla(0, 0%, 100%, 0.548);
+    color: black;
+    border-radius: 20px;
+    overflow: hidden
+}

@@ -1,0 +1,93 @@
+<head>
+    <link rel="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+
+<body>
+    <nav>
+        <app-nav-bar></app-nav-bar>
+    </nav>
+    <div class="container-fluid" style="width: 700px">
+        <h2 class="text-center" *ngIf="!submitted && !confirmed">Admin-Add Coupons </h2>
+
+        <!-- ADMIN-ADD-COUPON-FORM -->
+
+        <form [formGroup]="adForm" (ngSubmit)="onsubmit()" *ngIf=!submitted>
+            <div class="form-group">
+                <label>Coupon Provider</label>
+                <input [class.is-invalid]="adForm.get('provider')?.invalid && adForm.get('provider')?.touched"
+                    formControlName="provider" class="form-control" type="text">
+                <small class="text-danger" *ngIf="adForm.get('provider')?.invalid && adForm.get('provider')?.touched">
+                    Provider required</small>
+            </div>
+
+            <div class="form-group">
+                <label>Coupon Code</label>
+                <input [class.is-invalid]="adForm.get('code')?.invalid && adForm.get('code')?.touched"
+                    formControlName="code" class="form-control" type="text">
+                <small class="text-danger" *ngIf="adForm.get('code')?.invalid && adForm.get('code')?.touched">
+                    Code required</small>
+                <h1></h1>
+            </div>
+
+            <div class="form-group">
+                <label>Category</label>
+                <select formControlName="category" class="custom-select" name="topic">
+                    <option value="default"> Select the Category</option>
+                    <option *ngFor="let category of categories">{{category}}</option>
+                </select>
+                <small class="text-danger" *ngIf="adForm.get('category')?.invalid && adForm.get('category')?.touched">
+                    Category required</small>
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea [class.is-invalid]="adForm.get('description')?.invalid && adForm.get('description')?.touched"
+                    formControlName="description" class="form-control form-control-sm" rows="2"></textarea>
+                <small class="text-danger"
+                    *ngIf="adForm.get('description')?.invalid && adForm.get('description')?.touched">
+                    Description required</small>
+            </div>
+            <h1></h1>
+            <button [disabled]="adForm?.invalid" class="btn btn-dark">Submit</button>
+        </form>
+
+
+        <!-- SUBMIT FORM -->
+
+        <div class="container" *ngIf="submitted && !confirmed">
+            <h2 class="text-center" style="font-family: fantasy;">Confirm your Added Coupon</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Coupon-Provider</th>
+                        <th>Code</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>{{ adForm.value.provider }}</th>
+                        <td>{{ adForm.value.code }}</td>
+                        <td>{{ adForm.value.category }}</td>
+                        <td>{{ adForm.value.description }}</td>
+                        <td>
+                            <button class="btn btn-primary btn-sm" (click)="confirm()" type="button"
+                                style="margin:5px">Submit</button>
+                            <button class="btn btn-danger btn-sm" (click)="cancel()" type="button">Cancel</button>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- CONFIRMATION -->
+
+
+        <div *ngIf=confirmed>
+            <h3 class="text-center" style="color:rgb(7, 124, 233);">Coupon Added Sucessfully </h3>
+        </div>
+    </div>
+</body>

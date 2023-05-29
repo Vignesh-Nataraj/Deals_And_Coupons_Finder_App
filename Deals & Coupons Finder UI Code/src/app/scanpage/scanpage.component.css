@@ -1,0 +1,22 @@
+body {
+    background: linear-gradient(to top, #000428 0%, #004e92 100%);
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    height: auto;
+}
+
+body::after {
+    background: linear-gradient(to top, #000428 0%, #004e92 100%);
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    height: auto;
+}
+
+img{
+    margin-top: 40px;}
+
+input{
+    background-color: #80808086;
+}

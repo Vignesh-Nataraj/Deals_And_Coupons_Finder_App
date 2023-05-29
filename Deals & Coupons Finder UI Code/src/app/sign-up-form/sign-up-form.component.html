@@ -1,0 +1,72 @@
+<head>
+    <link rel="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<body>
+    <nav>
+        <app-nav-bar></app-nav-bar>
+    </nav>
+    <div class="container-fluid" style="width: 600px">
+        <div class="login-wrap">
+            <div class="login-html">
+
+                <!-- <h2 style="font-family: fantasy;" class="text-center" *ngIf="!submitted && !confirmed">SIGN UP</h2> -->
+                <div class="Login-Wrap">
+                    <!-- SIGN-UP-FORM -->
+                    <h2 style="font-family: fantasy;" class="text-center" *ngIf="!submitted && !confirmed" style="color: white;">SIGN UP</h2>
+                    <form style="background-color: gray;" [formGroup]="adForm" (ngSubmit)="onsubmit()" *ngIf=!submitted
+                        style="height: 300px;">
+                        <div class="group">
+                            <label style="font-weight:bolder;">Username</label>
+                            <input
+                                [class.is-invalid]="adForm.get('username')?.invalid && adForm.get('username')?.touched"
+                                formControlName="username" class="form-control" type="text">
+                            <small class="text-danger"
+                                *ngIf="adForm.get('username')?.invalid && adForm.get('username')?.touched">
+                                Username Required</small>
+                        </div>
+
+                        <div class="group">
+                            <label style="font-weight:bolder;">Password</label>
+                            <input
+                                [class.is-invalid]="adForm.get('password')?.invalid && adForm.get('password')?.touched"
+                                formControlName="password" class="form-control" type="password">
+                            <small class="text-danger"
+                                *ngIf="adForm.get('password')?.invalid && adForm.get('password')?.touched">
+                                Password Required</small>
+                            <h1></h1>
+                        </div>
+
+                    
+
+                        <div class="group">
+                            <label style="font-weight:bolder;">Email</label>
+                            <input [class.is-invalid]="adForm.get('email')?.invalid && adForm.get('email')?.touched"
+                                formControlName="email" class="form-control form-control-sm">
+                            <small class="text-danger"
+                                *ngIf="adForm.get('email')?.invalid && adForm.get('email')?.touched">
+                                Email Required</small>
+
+
+                        </div>
+                        <h1></h1>
+                        <button [disabled]="adForm?.invalid" class="btn btn-dark">Submit</button>
+                        
+                    </form>
+                    <h1 *ngIf=submitted style="text-align:center; color: grey;"> USER REGISTERED SUCCESSFULLY! </h1>
+                  <button type="button" *ngIf=submitted class="btn btn-dark" routerLink="/login" style="text-align: center;" >GO BACK</button>
+    
+                </div>
+                
+
+
+            </div>
+        </div>
+    </div>
+
+</body>

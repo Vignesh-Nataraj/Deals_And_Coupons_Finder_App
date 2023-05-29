@@ -1,0 +1,83 @@
+
+
+
+
+<body>
+    <!-- Font Awesome -->
+
+    <nav>
+        <app-nav-bar></app-nav-bar>
+    </nav>
+    <mat-toolbar style="height: 10px;background-image: linear-gradient(to right, #434343 0%, black 100%);">
+    </mat-toolbar>
+    <br>
+    <!-- PROFILE DETAILS CARD -->
+    <div class="profile-details" style="float:left; width:20%; margin-right: 10px; ">
+        <mat-card style="height: 1000px;">
+            <div style="text-align: center;">
+                <img src="assets\images\User.png">
+            </div>
+            <mat-card-title style="font-family: cursive;" *ngIf="!loggedIn" style="text-align: center;"> Welcome User
+            </mat-card-title>
+            <h3 style="text-align: center; font-family: cursive; font-weight: bold;font-size: medium;  ">
+                <mat-card-content *ngIf="!loggedIn">Sign in to See your Cashback Points </mat-card-content>
+            </h3>
+            <mat-card-title style="font-family: cursive;" *ngIf="loggedIn" style="text-align: center;">Welcome
+                {{username}}</mat-card-title>
+            <h3 style="text-align: center; font-family: cursive; font-weight: bold;font-size: medium;">
+                <mat-card-content *ngIf="loggedIn">You have {{cashbackPoints}} Cashback Points </mat-card-content>
+            </h3>
+            <a style="text-align: center;" *ngIf="loggedIn"> <button type="button" class="btn btn-dark" routerLink="/scan" >Use Cashback</button></a>
+            <!-- For Bottom Widget -->
+            <br>
+            <iframe src="https://cwidget.crictimes.org/" style="height: 460px;   width: 220px;  " frameborder="0"
+                scrolling="yes" align="left"></iframe>
+        </mat-card>
+    </div>
+
+    <!-- NEWS WIDGET -->
+    <iframe title="NEWS" src="https://cio.economictimes.indiatimes.com/widget/next-gen-technologies"
+        allowtransparency="yes" frameborder="0" align="right"></iframe>
+    <div class="Content">
+        <div class="container-fluid" style="width: 950px">
+            <!-- ALL COUPON CARDS -->
+            <h1 style="font-family: fantasy;">ALL COUPONS
+            </h1>
+            <mat-grid-list cols="3" rowHeight="1.5:1">
+                <mat-grid-tile *ngFor="let coupon of ListOfCoupons;let i=index">
+
+                    <mat-card (click)=toggle(i) style="width:280px;">
+                        <img [src]="getImg(coupon.provider)" height="50">
+
+                        <mat-card-content class="card-container-left">{{coupon.description}}
+                            <h4 *ngIf="codeClick[i]" class="card-container-left">{{coupon.code}}</h4>
+                            <h4><button type="button" class="btn btn-dark"
+                                    *ngIf="click[i] && !codeClick[i] && !couponUsedChecker(coupon.id)"
+                                    (click)="codeToggle(i,coupon)">Get Coupon</button> </h4>
+                            <h4 *ngIf="couponUsedChecker(coupon.id)"> COUPON USED </h4>
+                        </mat-card-content>
+                    </mat-card>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </div>
+
+        <!-- ALL DEALS -->
+        <div class="container-fluid" style="width: 950px">
+            <div style="height:1000px">
+                <h1 style="font-family: fantasy;">ALL DEALS
+                </h1>
+                <mat-grid-list cols="3" rowHeight="1.5:1">
+                    <mat-grid-tile *ngFor="let Deal of ListOfDeals">
+                        <mat-card style="width:280px;" (click)="dealRedirect(Deal.link)">
+                            <img [src]="getImg(Deal.provider)" height="50">
+                            <mat-card-title class="card-container-right">{{Deal.provider}}</mat-card-title>
+
+                            <mat-card-content class="card-container-left">{{Deal.description}}</mat-card-content>
+                        </mat-card>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </div>
+        </div>
+    </div>
+</body>
+

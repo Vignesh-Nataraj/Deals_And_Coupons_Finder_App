@@ -1,0 +1,129 @@
+.content {
+    padding: 16px;
+}
+
+.content>mat-card {
+    width: 200px;
+}
+
+.mat-card:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    color: black;
+}
+
+.mat-card {
+    /* background-color: rgba(255, 255, 255, 0.466); */
+    background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+    background-blend-mode: normal, lighten, soft-light;
+    transition: all 0.5s linear;
+}
+
+.mat-card {
+    border-radius: 40px
+}
+
+.profile-details {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    float: left;
+    margin-left: 10px;
+    margin-right: 5px;
+    padding: auto;
+}
+
+.mat-card {
+    height: 160px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: left;
+}
+
+h3 {
+    text-align: right;
+}
+
+iframe {
+    height: 1000px;
+    border-radius: 10px;
+    padding: auto;
+}
+
+ngbDropdown {
+    align-items: center;
+    padding: auto;
+}
+
+body {
+    background: linear-gradient(to top, #000428 0%, #004e92 100%);
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    height: auto;
+}
+
+body::after {
+    background: linear-gradient(to top, #000428 0%, #004e92 100%);
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    height: auto;
+}
+
+html {
+    margin: 0;
+    font-family: "Muli", sans-serif;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    margin: 0;
+    font-size: 1.15rem;
+    line-height: 1.4em;
+}
+
+#container {
+    background-color: #FFF;
+    margin: 80px 10%;
+    padding: 30px 60px;
+    border-radius: 20px;
+    box-shadow: 0 3px 26px 0 rgba(0, 0, 0, 0.2);
+}
+
+main, header {
+    box-sizing: border-box;
+}
+
+main {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    color: #6b6b6b;
+    margin: 40px 0;
+}
+
+.profile-details>.mat-card {
+    color: black;
+    /* background-color: rgba(255, 255, 255, 0.884); */
+    background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+    background-blend-mode: normal, lighten, soft-light;
+    width: 280px;
+    border-radius: 10px;
+    transition: none;
+    transform: none;
+    height: 1000px;
+    float: left;
+    padding: auto;
+}
+
+
+

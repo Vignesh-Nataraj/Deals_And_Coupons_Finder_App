@@ -1,0 +1,38 @@
+<body>
+    <nav>
+        <app-nav-bar></app-nav-bar>
+    </nav>
+
+    <div class="container" style="width: 1000px">
+        <h1>List of Coupons</h1>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <!-- <th>ID</th> -->
+                    <th>Provider</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Coupon-Code</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let coupon of ListOfCoupons; let i = index">
+                    <!-- <th>{{ coupon.id }}</th> -->
+                    <td>{{ coupon.provider }}</td>
+                    <td>{{ coupon.category }}</td>
+                    <td>{{ coupon.description}}</td>
+                    <td>{{ coupon.code}}</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm" (click)="delete(coupon.id,i)" type="button">Delete
+                            Coupon</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-primary btn-sm" (click)="edit(coupon.id)" type="button">Edit
+                            Coupon</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>

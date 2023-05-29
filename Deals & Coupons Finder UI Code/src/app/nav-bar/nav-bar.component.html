@@ -1,0 +1,55 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar navbar-transparent bg-transparent ">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="assets\images\logo.png" alt="" width="200" height="100">
+        </a>
+
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+                <a class="nav-link "  routerLink="/homepage" href="#">Home Page</a>
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link " aria-current="/homepage" href="#">Coupons</a>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.ndtv.com/" target="_blank" rel="noopener noreferrer">News</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about-us" target="_blank" rel="noopener noreferrer">About Us</a>
+            </li>
+        </ul>
+        <ul class="ml-auto mr-5">
+            <ul>
+                <ul>
+                    <li class="nav nav-tabs lm">
+                        <div ngbDropdown class="d-inline-block">
+                            <button class="btn btn-dark" id="ngbDropdownMenu" ngbDropdownToggle>{{Account}}</button>
+                            <div ngbDropdownMenu style=background:white>
+                                <button *ngIf="isAdmin" ngbDropdownItem routerLink="/coupon-form">Add Coupons </button>
+                                <button *ngIf="isAdmin" ngbDropdownItem routerLink="/table">Edit-Coupons</button>
+                                <!-- <button *ngIf="isAdmin" ngbDropdownItem routerLink="/edit-coupon">editcoupon</button> -->
+                                <button *ngIf="isAdmin" ngbDropdownItem routerLink="/deal-form">Add Deals</button>
+                                <button *ngIf="isAdmin" ngbDropdownItem routerLink="/dealtable">Edit-Deals</button>
+                                <button *ngIf="loggedIn" ngbDropdownItem routerLink="/logout">Logout</button>
+                                <button *ngIf="!loggedIn" ngbDropdownItem routerLink="/login">Login</button>
+                                <button *ngIf="!loggedIn" ngbDropdownItem routerLink="/signup">Sign Up</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </ul>
+        </ul>
+    </div>
+</nav>

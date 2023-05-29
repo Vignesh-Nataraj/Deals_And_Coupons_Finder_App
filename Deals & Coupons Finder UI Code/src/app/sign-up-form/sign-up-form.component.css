@@ -1,0 +1,59 @@
+body {
+    background: linear-gradient(to top, #000428 0%, #004e92 100%);
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    
+}
+
+form  {
+    /* background-color: hsla(0, 0%, 100%, 0.548); */
+    /* background-color: gray; */
+    /* background-color: #808080a9; */
+    
+    border-radius: 5px;
+    width: 400px;
+    margin-top: 90px;
+    margin-left: 90px;
+    margin-bottom: 90px;
+    color: #ffffff9f;
+}
+
+table{
+    /* background-color: hsla(0, 0%, 100%, 0.548); */
+    background-color: #8080809c;
+    border-radius: 1px;
+    overflow: hidden;
+    color:white;
+    width: 400px;
+    
+
+} 
+
+
+input{
+
+    background-color: rgba(245, 245, 245, 0.473);
+    border-radius: 1px;
+}
+
+.Login-Wrap {
+    width: 100%;
+    margin: auto;
+    max-width: 600px;
+    min-height: 440px;
+    position: relative;
+    /* background-color: hsla(0, 0%, 100%, 0.548); */
+    background-color: rgba(14, 12, 12, 0.459);
+    background-size: cover;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+h2{
+    margin-top: 20px;
+    padding-top: 20px;
+    font-family: fantasy;
+    
+}

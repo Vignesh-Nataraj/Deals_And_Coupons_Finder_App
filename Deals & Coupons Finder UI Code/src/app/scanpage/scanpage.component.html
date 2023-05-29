@@ -1,0 +1,23 @@
+<body>
+    <nav>
+        <app-nav-bar></app-nav-bar>
+    </nav>
+
+<div style="text-align: center;">
+        <h1 style="color: #adacac;" >Scan and Use your Cashback</h1>
+
+        <form action="/action_page.php">
+            <label for="fname" style="color: black;">Payment ID</label><br>
+            <input type="text" id="fname" name="Payment ID" value="test@okicici"><br>
+            <label for="lname" style="color: black;">Cashback to be Redeemed</label><br>
+            <input type="number"  name="Cashback to be Redeemed" [(ngModel)] = "Cashback_to_be_Redeemed" ><br><br>
+            <input type="submit" value="Use Cashback" (click) = "onsubmit()" >
+          </form>
+          <!-- <p>{{Cashback_to_be_Redeemed}}</p> -->
+          <p style="color: green;font-weight: bold;">Available Points: {{cashbackPoints}}</p>
+          <p style="color: green; font-weight: bold;" *ngIf="clickButton" >Points Redeemed Succesfully Thank You !</p>
+          <p style="color: red;font-weight: bold;" *ngIf = "error && !clickButton" >Insufficient Points !</p>
+        <img style="height: 630px;" src="assets/images/scan.gif"> 
+
+</div>
+</body>

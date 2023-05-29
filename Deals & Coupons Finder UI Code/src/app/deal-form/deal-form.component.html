@@ -1,0 +1,85 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+
+<body>
+    <nav>
+        <app-nav-bar></app-nav-bar>
+    </nav>
+    <div class="container-fluid" style="width: 600px">
+        <h2 class="text-center" *ngIf="!submitted && !confirmed">Admin-Add Deals</h2>
+        <!-- ADMIN-ADD-COUPON-FORM -->
+
+        <form [formGroup]="adForm" (ngSubmit)="onsubmit()" *ngIf=!submitted>
+            <div class="form-group">
+                <label>Provider</label>
+                <input [class.is-invalid]="adForm.get('provider')?.invalid && adForm.get('provider')?.touched"
+                    formControlName="provider" class="form-control" type="text">
+                <small class="text-danger" *ngIf="adForm.get('provider')?.invalid && adForm.get('provider')?.touched">
+                    Provider required</small>
+            </div>
+
+            <div class="form-group">
+                <label>Category</label>
+                <select formControlName="category" class="custom-select" name="topic">
+                    <option value="default"> Select the category</option>
+                    <option *ngFor="let category of categories">{{category}}</option>
+                </select>
+                <small class="text-danger" *ngIf="adForm.get('category')?.invalid && adForm.get('category')?.touched">
+                    Category required</small>
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea [class.is-invalid]="adForm.get('description')?.invalid && adForm.get('description')?.touched"
+                    formControlName="description" class="form-control form-control-sm" rows="5"></textarea>
+                <small class="text-danger"
+                    *ngIf="adForm.get('description')?.invalid && adForm.get('description')?.touched">
+                    Description required</small>
+            </div>
+
+            <div class="form-group">
+                <label>Link</label>
+                <textarea [class.is-invalid]="adForm.get('link')?.invalid && adForm.get('link')?.touched"
+                    formControlName="link" class="form-control form-control-sm" rows="5"></textarea>
+                <small class="text-danger" *ngIf="adForm.get('link')?.invalid && adForm.get('link')?.touched">
+                    Link required</small>
+            </div>
+            <button [disabled]="adForm?.invalid" class="btn btn-dark">Submit</button>
+        </form>
+        <!-- SUBMIT FORM -->
+        <div class="container" *ngIf="submitted && !confirmed">
+            <h3 style="font-family: fantasy;">Confirmation</h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Provider</th>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Link</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ adForm.value.provider }}</td>
+                        <td>{{ adForm.value.category }}</td>
+                        <td>{{ adForm.value.description }}</td>
+                        <td>{{ adForm.value.link }}</td>
+                        <td>
+                            <button class="btn btn-dark btn-sm" (click)="confirm()" type="button">Submit </button>
+
+                            <button class="btn btn-danger btn-sm" (click)="cancel()" type="button">Cancel</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- CONFIRMATION FORM  -->
+        <div *ngIf=confirmed>
+            <h3 class="text-center" style="color:green;">Deal Added</h3>
+        </div>
+    </div>
+</body>

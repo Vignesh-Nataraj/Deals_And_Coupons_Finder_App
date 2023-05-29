@@ -1,0 +1,40 @@
+/* body {
+      background: linear-gradient(to top, #000428 0%, #004e92 100%);
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    background: linear-gradient(to top, #000428 0%, #004e92 100%);
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+} */
+body {
+    background: linear-gradient(to top, #000428 0%, #004e92 100%);
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    
+}
+
+form {
+    background-color: hsla(0, 0%, 100%, 0.548);
+    border-radius: 10px;
+}
+
+table{
+    background-color: hsla(0, 0%, 100%, 0.548);
+    border-radius: 10px;
+    overflow: hidden;
+    color:black
+    
+
+}
