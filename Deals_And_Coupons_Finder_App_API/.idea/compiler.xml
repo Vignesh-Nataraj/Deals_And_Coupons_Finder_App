@@ -13,13 +13,6 @@
         <module name="Discoveryserver" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="coupons" target="11" />
-      <module name="deals" target="11" />
-      <module name="Discoveryserver" target="11" />
-      <module name="routing-and-filtering-gateway" target="11" />
-      <module name="userDetails" target="11" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
